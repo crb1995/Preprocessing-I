@@ -134,15 +134,126 @@ body,
 html {
   height: 100%;
 }
+/* Variables */
 .container {
+  font-family: 'Roboto', sans-serif;
   max-width: 880px;
   margin: 0 auto;
-  border: 1px solid red;
+  padding: 0 1.5%;
 }
-.container .cta-content {
-  border: 1px solid blue;
+.container nav {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-end;
 }
-.container .cta-content img {
-  width: 45%;
+.container nav .navbar {
+  width: 38%;
+  display: flex;
+  justify-content: space-between;
+}
+.container nav .navbar a {
+  text-decoration: none;
+  color: black;
+  padding: 3px;
+}
+.container nav .navbar a:hover {
+  color: darkgray;
+}
+.container .cta-container {
+  background: whitesmoke;
+  border-radius: 4px;
+}
+.container .cta-container .cta-content {
+  padding: 50px 30px 60px;
+}
+.container .cta-container .cta-content .cta-content-top {
+  border-bottom: 1px solid lightgray;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+.container .cta-container .cta-content .cta-content-top img {
+  width: 38%;
   height: auto;
+  border-radius: 2px;
+}
+.container .cta-container .cta-content .cta-content-top h1 {
+  font-size: 50px;
+}
+.container .cta-container .cta-content .cta-content-top p {
+  margin-top: 10px;
+  font-size: 21px;
+}
+.container .cta-container .cta-content .cta-content-bottom p {
+  margin-bottom: 30px;
+}
+.container .cta-container .cta-content .cta-content-bottom a {
+  margin-top: 80px;
+  background: gray;
+  padding: 8px 25px;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.container .cta-container .cta-content .cta-content-bottom a:hover {
+  background: white;
+  color: gray;
+}
+.container main .main-top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+}
+.container main .main-top .main-top-item {
+  width: 48%;
+}
+.container main .main-top .main-top-item h2 {
+  font-weight: bold;
+  font-size: 25px;
+  margin: 0 0 10px 0;
+}
+.container main .main-top .main-top-item ul li {
+  padding: 7px 0 7px 8px;
+  border-top: 1px solid gray;
+  border-left: 1px solid gray;
+  border-right: 1px solid gray;
+}
+.container main .main-top .main-top-item ul li:nth-of-type(5) {
+  border-bottom: 1px solid gray;
+}
+.container main .main-bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 40px;
+}
+.container main .main-bottom h2 {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 15px 0 10px 0;
+}
+.container main .main-bottom table th {
+  font-weight: bold;
+  border-top: 1px solid gray;
+}
+.container main .main-bottom table td,
+.container main .main-bottom table th {
+  padding: 10px 0 10px 5px;
+  text-align: left;
+  border-bottom: 2px solid gray;
+}
+.container main .main-bottom table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+footer {
+  margin: 0 auto;
+  width: 900px;
+  background: gray;
+}
+footer p {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
 }
