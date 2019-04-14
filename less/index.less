@@ -142,9 +142,9 @@ body,
 html {
 	height: 100%;
 }
-
-/* Variables */
-
+// Variables
+@border: 1px solid gray; // Mixins
+// I currently have no logical places to apply any mixins, however I do understand how to use them.
 
 .container {
 	font-family: 'Roboto', sans-serif;
@@ -156,14 +156,29 @@ html {
 		margin: 20px 0;
 		display: flex;
 		justify-content: flex-end;
-
+		width: 100%;
+		// @media (max-width: 500px){
+		// 	justify-content: center;
+		// }
 		.navbar {
-			width: 38%;
+			width: 45%;
 			display: flex;
-			justify-content: space-between;
+			justify-content: space-around;
+			padding-right: 20px;
+			@media (max-width: 500px) {
+				justify-content: space-around;
+				padding-right: 0;
+				width: 100%;
+			}
 
 			a {
 				// padding-left: 30px;
+				@media (max-width: 600px) {
+					padding-left: 10px;
+				}
+				@media (max-width: 500px) {
+					padding-left: 0;
+				}
 				text-decoration: none;
 				color: black;
 				padding: 3px;
@@ -183,17 +198,36 @@ html {
 			padding: 50px 30px 60px;
 
 			.cta-content-top {
-				border-bottom: 1px solid lightgray;
+				border-bottom: @border;
 				margin-bottom: 20px;
 				padding-bottom: 20px;
+				@media (max-width: 500px) {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+				}
+
 				img {
 					width: 38%;
 					height: auto;
 					border-radius: 2px;
+					@media (max-width: 600px) {
+						width: 50%;
+					}
+					@media (max-width: 500px) {
+						width: 80%;
+					}
 				}
 
 				h1 {
 					font-size: 50px;
+					@media (max-width: 600px) {
+						font-size: 35px;
+					}
+					@media (max-width: 500px) {
+						font-size: 2em;
+						margin-top: 15px;
+					}
 				}
 
 				p {
@@ -203,17 +237,28 @@ html {
 			}
 
 			.cta-content-bottom {
+				padding-bottom: 10px;
+				@media(max-width: 500px) {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+					padding: 0;
+				}
+
 				p {
-					margin-bottom: 30px;
+					padding-bottom: 30px;
 				}
 
 				a {
-					margin-top: 80px;
 					background: gray;
-					padding: 8px 25px;
+					padding: 5px 25px;
+					margin: 10px 0;
 					color: white;
 					text-decoration: none;
 					border-radius: 5px;
+					@media (max-width: 500px) {
+						margin: 0;
+					}
 				}
 
 				a:hover {
@@ -229,27 +274,40 @@ html {
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			margin: 25px 0 35px 0;
+			margin: 25px 0 35px;
+			@media (max-width: 500px) {
+				flex-direction: column;
+				align-items: center;
+			}
+
+			#mti-1 {
+				@media(max-width: 500px) {
+					margin-bottom: 30px;
+				}
+			}
 
 			.main-top-item {
 				width: 48%;
+				@media (max-width: 500px) {
+					width: 80%;
+				}
 
 				h2 {
 					font-weight: bold;
 					font-size: 25px;
-					margin: 0 0 10px 0;
+					margin: 0 0 10px;
 				}
 
 				ul {
 					li {
 						padding: 7px 0 7px 8px;
-						border-top: 1px solid gray;
-						border-left: 1px solid gray;
-						border-right: 1px solid gray;
+						border-top: @border;
+						border-left: @border;
+						border-right: @border;
 					}
 
 					li:nth-of-type(5) {
-						border-bottom: 1px solid gray;
+						border-bottom: @border;
 					}
 				}
 			}
@@ -265,13 +323,13 @@ html {
 			h2 {
 				font-size: 25px;
 				font-weight: bold;
-				margin: 15px 0 10px 0;
+				margin: 15px 0 10px;
 			}
 
 			table {
 				th {
 					font-weight: bold;
-					border-top: 1px solid gray;
+					border-top: @border;
 				}
 
 				td,
@@ -291,8 +349,9 @@ html {
 
 footer {
 	margin: 0 auto;
-	width: 900px;
+	max-width: 900px;
 	background: gray;
+	width: 100%;
 
 	p {
 		font-family: 'Roboto', sans-serif;

@@ -134,7 +134,6 @@ body,
 html {
   height: 100%;
 }
-/* Variables */
 .container {
   font-family: 'Roboto', sans-serif;
   max-width: 880px;
@@ -145,16 +144,35 @@ html {
   margin: 20px 0;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
 }
 .container nav .navbar {
-  width: 38%;
+  width: 45%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  padding-right: 20px;
+}
+@media (max-width: 500px) {
+  .container nav .navbar {
+    justify-content: space-around;
+    padding-right: 0;
+    width: 100%;
+  }
 }
 .container nav .navbar a {
   text-decoration: none;
   color: black;
   padding: 3px;
+}
+@media (max-width: 600px) {
+  .container nav .navbar a {
+    padding-left: 10px;
+  }
+}
+@media (max-width: 500px) {
+  .container nav .navbar a {
+    padding-left: 0;
+  }
 }
 .container nav .navbar a:hover {
   color: darkgray;
@@ -167,32 +185,76 @@ html {
   padding: 50px 30px 60px;
 }
 .container .cta-container .cta-content .cta-content-top {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid gray;
   margin-bottom: 20px;
   padding-bottom: 20px;
+}
+@media (max-width: 500px) {
+  .container .cta-container .cta-content .cta-content-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .container .cta-container .cta-content .cta-content-top img {
   width: 38%;
   height: auto;
   border-radius: 2px;
 }
+@media (max-width: 600px) {
+  .container .cta-container .cta-content .cta-content-top img {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .container .cta-container .cta-content .cta-content-top img {
+    width: 80%;
+  }
+}
 .container .cta-container .cta-content .cta-content-top h1 {
   font-size: 50px;
+}
+@media (max-width: 600px) {
+  .container .cta-container .cta-content .cta-content-top h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 500px) {
+  .container .cta-container .cta-content .cta-content-top h1 {
+    font-size: 2em;
+    margin-top: 15px;
+  }
 }
 .container .cta-container .cta-content .cta-content-top p {
   margin-top: 10px;
   font-size: 21px;
 }
+.container .cta-container .cta-content .cta-content-bottom {
+  padding-bottom: 10px;
+}
+@media (max-width: 500px) {
+  .container .cta-container .cta-content .cta-content-bottom {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+  }
+}
 .container .cta-container .cta-content .cta-content-bottom p {
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 .container .cta-container .cta-content .cta-content-bottom a {
-  margin-top: 80px;
   background: gray;
-  padding: 8px 25px;
+  padding: 5px 25px;
+  margin: 10px 0;
   color: white;
   text-decoration: none;
   border-radius: 5px;
+}
+@media (max-width: 500px) {
+  .container .cta-container .cta-content .cta-content-bottom a {
+    margin: 0;
+  }
 }
 .container .cta-container .cta-content .cta-content-bottom a:hover {
   background: white;
@@ -202,15 +264,31 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin: 25px 0 35px 0;
+  margin: 25px 0 35px;
+}
+@media (max-width: 500px) {
+  .container main .main-top {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 500px) {
+  .container main .main-top #mti-1 {
+    margin-bottom: 30px;
+  }
 }
 .container main .main-top .main-top-item {
   width: 48%;
 }
+@media (max-width: 500px) {
+  .container main .main-top .main-top-item {
+    width: 80%;
+  }
+}
 .container main .main-top .main-top-item h2 {
   font-weight: bold;
   font-size: 25px;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
 }
 .container main .main-top .main-top-item ul li {
   padding: 7px 0 7px 8px;
@@ -231,7 +309,7 @@ html {
 .container main .main-bottom h2 {
   font-size: 25px;
   font-weight: bold;
-  margin: 15px 0 10px 0;
+  margin: 15px 0 10px;
 }
 .container main .main-bottom table th {
   font-weight: bold;
@@ -248,8 +326,9 @@ html {
 }
 footer {
   margin: 0 auto;
-  width: 900px;
+  max-width: 900px;
   background: gray;
+  width: 100%;
 }
 footer p {
   font-family: 'Roboto', sans-serif;
